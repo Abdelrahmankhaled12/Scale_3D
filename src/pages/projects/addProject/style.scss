@@ -1,0 +1,163 @@
+@import '../../../mixins.scss';
+
+.addProject {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.224);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    transition: 0.5s;
+    z-index: 10000000;
+
+    &.hide {
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .closeModel {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.224);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .addProjectContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        max-width: 850px;
+        width: 93%;
+        border-radius: 10px;
+        z-index: 2;
+
+        @include sm {
+            width: 100%;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #00000055;
+            padding: 15px 20px 10px;
+
+            button {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            h3 {
+                font-size: 22px;
+                font-weight: 500;
+            }
+        }
+
+        .body {
+            padding: 15px 20px 10px;
+
+            .grid_form {
+                display: grid;
+                gap: 25px;
+                @include md {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            form {
+                .div {
+                    &:first-of-type {
+                        margin-top: 5px;
+                    }
+
+                    label {
+                        display: block;
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+
+                    input {
+                        width: 100%;
+                        margin-top: 7px;
+                        padding: 10px 15px;
+                        font-size: 16px;
+                        border-radius: 8px;
+                        outline: none;
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                    }
+                }
+                button {
+                    border-top: 1px solid #000;
+                    display: block;
+                    width: 250px;
+                    padding: 10px;
+                    background-color: var(--primary);
+                    color: rgba(255, 255, 255, 1);
+                    border-radius: 8px;
+                    border: 1px solid var(--primary);
+                    transition: 0.5s;
+                    cursor: pointer;
+                    font-size: 17px;
+                    margin-top: 20px;
+                    font-weight: 500;
+                    margin-left: auto;
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 1);
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+.radiosFields {
+    border-bottom: 1px solid #0000001c;
+    padding-bottom: 20px;
+    p {
+        font-weight: 500;
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+}
+.radios {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    gap: 10px;
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        padding: 10px 20px 12px;
+        font-size: 15px;
+        color:  var(--primary);
+        font-weight: 400;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        transition: 0.5s;
+        text-align: center;
+        border: 1px solid var(--primary);
+        border-radius: 10px;
+        font-weight: 500;
+    }
+}
+
+input[type="radio"]:checked+label {
+    background-color: var(--primary);
+    color: #ffffff;
+    border-radius: 8px;
+}

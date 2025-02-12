@@ -1,0 +1,13 @@
+@import '../../mixins.scss';
+
+.dashboard {
+    padding: 20px;
+
+    .grid {
+        display: grid;
+        gap: 20px;
+        @include md {
+            grid-template-columns: 4fr 1.5fr;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+@import '../../../mixins.scss';
+
+.topUsers {
+    background-color: #ffffff;
+    padding: 20px 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px 0px rgba(171, 171, 171, 0.155);
+    margin-top: 20px;
+    @include sm {
+        padding: 30px 50px 40px;
+    }
+
+    h4 {
+        font-size: 25px;
+        border-bottom: 1px solid rgba(229, 229, 239, 1);
+        padding-bottom: 20px;
+    }
+
+    .static {
+        margin-top: 20px;
+
+        .item {
+            margin-top: 55px;
+            display: flex;
+            align-items: center;
+
+            &:first-of-type {
+                margin-top: 25px;
+            }
+
+            h5 {
+                width: 100px;
+                font-weight: 400;
+                color: rgba(97, 94, 131, 1);
+                font-size: 18px;
+                @include sm {
+                    width: 120px;
+                }
+            }
+
+            .number {
+                color: rgba(97, 94, 131, 1);
+                font-size: 20px;
+            }
+
+            .process {
+
+                margin-right: auto;
+                flex: 1;
+
+                span {
+                    background-color: var(--primary);
+                    height: 20px;
+                    width: 100%;
+                    border-radius: 5px;
+                    display: block;
+                    @include sm {
+                        height: 40px;
+                    }
+                }
+            }
+
+            &:nth-of-type(1) {
+                .process {
+                    span {
+                        width: 90%;
+                    }
+
+                }
+            }
+
+            &:nth-of-type(2) {
+                .process {
+                    span {
+                        width: 70%;
+                    }
+                }
+            }
+
+            &:nth-of-type(3) {
+                .process {
+                    span {
+                        width: 50%;
+                    }
+
+                }
+            }
+
+            &:nth-of-type(4) {
+                .process {
+                    span {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}

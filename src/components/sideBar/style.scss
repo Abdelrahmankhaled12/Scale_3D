@@ -1,0 +1,52 @@
+@import '../../mixins.scss';
+
+.sideBar {
+    display: none;
+    &.sideBarActive {
+        display: none;
+        @include lg {
+            display: block;
+        }
+    }
+
+    ul {
+        background-color: #ffffff;
+        padding: 20px 0px;
+        list-style: none;
+        border-bottom-right-radius: 8px;
+
+        li {
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            font-size: 1.1rem;
+            padding: 9px 16px;
+            border-radius: 6px;
+            list-style: none;
+            cursor: pointer;
+            transition: 0.5s;
+            width: 90%;
+            transition: 0.3s;
+            margin-bottom: 10px;
+            font-weight: 300;
+
+            svg {
+                color: var(--primary);
+                margin-right: 10px;
+            }
+
+            &:hover {
+                background-color: rgba(164, 164, 164, 0.134);
+            }
+        }
+
+        li.active {
+            color: var(--primary);
+            font-weight: 600;
+            
+            svg {
+                color: var(--primary);
+            }
+        }
+    }
+}

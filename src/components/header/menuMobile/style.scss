@@ -1,0 +1,121 @@
+@import '../../../mixins.scss';
+
+.menu {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.159);
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100000;
+    transform: translateX(120%);
+    transition: 0.5s;
+    display: block;
+    .flex {
+        display: flex;
+        .content {
+            background-color: #FFFFFF !important;
+            height: 100vh;
+            width: 400px;
+            padding: 20px 0px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #00000030;
+                padding: 5px 20px 5px 10px;
+                color: #ffffff;
+
+                h1 {
+                    font-size: 35px;
+                    font-weight: 700;
+                    color: var(--primary);
+                    font-style: italic;
+                }
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                    font-size: 25px;
+                    cursor: pointer;
+                    color: var(--primary);
+                }
+            }
+            ul {
+                background-color: #ffffff;
+                padding: 10px 0px;
+                list-style: none;
+                border-bottom-right-radius: 8px;
+        
+                li {
+                    display: flex;
+                    align-items: center;
+                    color: var(--primary);
+                    font-size: 1.1rem;
+                    padding: 9px 16px;
+                    border-radius: 6px;
+                    list-style: none;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    width: 90%;
+                    transition: 0.3s;
+                    margin-bottom: 10px;
+                    font-weight: 300;
+        
+                    svg {
+                        color: var(--primary);
+                        margin-right: 10px;
+                    }
+        
+                    &:hover {
+                        background-color: rgba(164, 164, 164, 0.134);
+                    }
+                }
+        
+                li.active {
+                    color: var(--primary);
+                    font-weight: 600;
+                    
+                    svg {
+                        color: var(--primary);
+                    }
+                }
+            }
+            .footer {
+                padding: 10px 20px 5px 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid #0000001d;
+                .userIcon {
+                    display: flex;
+                    align-items: center;
+                    border-right: 2px solid #ffffff;
+                    padding-right: 20px;
+                    gap: 10px;
+                    p {
+                        font-size: 22px;
+                        flex: 1;
+                        font-weight: 500;
+                        position: relative;
+                        top: -3px;
+                    }
+                }
+                svg {
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    @include lg {
+        display: none;
+    }
+}
+
+.menu_active {
+    transform: translateX(0%);
+}

@@ -1,0 +1,149 @@
+@import '../../../../mixins.scss';
+
+.navBarProjectDetails {
+    display: flex;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px 0px rgba(171, 171, 171, 0.155);
+    margin-bottom: 30px;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    @include lg {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .name {
+        font-size: 20px;
+        font-weight: 500;
+        @include sm {
+            font-size: 25px;
+        }
+        ul {
+            padding: 10px 20px;
+            @include sm {
+                padding: 10px 50px;
+            }
+            li {
+                font-size: 15px;
+                font-weight: 500;
+                margin: 10px 0px;
+                @include sm {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .switch {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+            height: 0px;
+            display: none;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--secondary);
+            border-radius: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: #FFFFFF !important;
+        }
+
+
+
+        .switchingTabs {
+            height: 40px;
+            background: linear-gradient(130deg, #F7F7F7, #F3F3F3);
+            border-radius: 15px;
+            border: 3px solid #FFFFFF;
+            box-shadow: 0px 4px 8px 0px rgba(171, 171, 171, 0.089);
+            border-radius: 30px;
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 5px;
+            overflow-x: auto;
+
+            .tabItems {
+                display: flex;
+                align-items: center;
+                height: 25px;
+                position: relative;
+                justify-content: space-evenly;
+
+                .tabItem {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--primary);
+                    font-size: 12px;
+                    font-weight: 500;
+                    position: relative;
+                    z-index: 1;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    padding: 0px 24px;
+                    height: 25px;
+
+                    @include sm {
+                        padding: 0px 25px;
+                        font-size: 16px;
+                    }
+
+                    &.active {
+                        color: white;
+                        height: 35px;
+                        border-radius: 25px;
+                        background-color: var(--primary);
+                    }
+                }
+            }
+        }
+    }
+    .actionButton {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: var(--primary);
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 500;
+        box-shadow: none;
+
+        svg {
+            margin-right: 10px;
+
+            &:first-of-type {
+                color: #ffffff;
+                font-size: 20px;
+            }
+        }
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+    .itemLi {
+        font-size: 15px;
+        font-weight: 500;
+        margin: 10px 0px;
+
+        &:first-of-type {
+            margin-top: 0px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+}

@@ -1,0 +1,120 @@
+@import '../../../mixins.scss';
+
+.boxChart {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 20px 0px rgba(171, 171, 171, 0.155);
+    margin-bottom: 20px;
+
+    &.reverse {
+        .static {
+            .item {
+                &:nth-of-type(1) {
+                    .process {
+                        span {
+                            width: 30%;
+                        }
+                    }
+                }
+                &:nth-of-type(2) {
+                    .process {
+                        span {
+                            width: 50%;
+                        }
+                    }
+                }
+                &:nth-of-type(3) {
+                    .process {
+                        span {
+                            width: 70%;
+                        }
+                    }
+                }
+                &:nth-of-type(4) {
+                    .process {
+                        span {
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include sm {
+        padding: 10px 20px 15px;
+    }
+
+    h4 {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .static {
+        margin-top: 20px;
+
+        .item {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+
+            h5 {
+                width: 70px;
+                color: rgba(97, 94, 131, 1);
+                font-weight: 400;
+            }
+            .number {
+                color: rgba(97, 94, 131, 1);
+            }
+
+            .process {
+
+                margin-right: auto;
+                flex: 1;
+
+                span {
+                    background-color: var(--primary);
+                    height: 10px;
+                    width: 100%;
+                    border-radius: 20px;
+                    display: block;
+                }
+            }
+
+            &:nth-of-type(1) {
+                .process {
+                    span {
+                        width: 90%;
+                    }
+
+                }
+            }
+
+            &:nth-of-type(2) {
+                .process {
+                    span {
+                        width: 70%;
+                    }
+                }
+            }
+
+            &:nth-of-type(3) {
+                .process {
+                    span {
+                        width: 50%;
+                    }
+
+                }
+            }
+
+            &:nth-of-type(4) {
+                .process {
+                    span {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}

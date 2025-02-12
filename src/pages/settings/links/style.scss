@@ -1,0 +1,32 @@
+@import '../../../mixins.scss';
+
+.linksPagesSetting {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    @include md {
+        flex-direction: row;
+    }
+
+    li {
+        font-size: 18px;
+        color: rgba(113, 123, 140, 1);
+        border-bottom: 2px solid rgba(224, 228, 236, 1);
+        padding-bottom: 8px;
+        cursor: pointer;
+        transition: 0.5s;
+        padding: 8px 10px;
+        &:hover {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+        }
+
+        &.active {
+            font-weight: 500;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+        }
+    }
+}

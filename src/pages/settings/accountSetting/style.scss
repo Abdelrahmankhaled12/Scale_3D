@@ -1,0 +1,152 @@
+@import '../../../mixins.scss';
+
+.accountSetting {
+    animation: content-animation 1s ease forwards;
+
+    form {
+        margin-top: 30px;
+
+        .input_image {
+            width: fit-content;
+            text-align: center;
+            cursor: pointer;
+
+            h4 {
+                color: rgba(76, 83, 95, 1);
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            .div {
+                margin-top: 10px;
+                border: 2px dashed rgba(76, 83, 95, 0.237);
+                padding: 20px;
+                border-radius: 20px;
+                background-color: rgba(237, 242, 246, 1);
+
+                p {
+                    color: rgba(76, 83, 95, 1);
+                    font-size: 14px;
+                    line-height: 1.5;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .grid_form {
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 50px;
+            row-gap: 15px;
+            margin-top: 20px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(224, 228, 236, 1);
+
+            @include md {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .div {
+            margin-bottom: 10px;
+
+            &.div_textarea {
+                margin-top: 20px;
+            }
+
+            label {
+                display: block;
+                font-weight: 500;
+                color: rgba(76, 83, 95, 1);
+                font-size: 14px;
+            }
+
+            .input_div {
+                position: relative;
+
+                svg {
+                    position: absolute;
+                    top: 56%;
+                    transform: translateY(-50%);
+                    left: 10px;
+                    font-size: 15px;
+                }
+
+                .eye {
+                    position: absolute;
+                    top: 56%;
+                    transform: translateY(-50%);
+                    right: 40px;
+                    cursor: pointer;
+                    transition: 0.5s;
+
+                    svg {
+                        transition: 0.5s;
+                        color: rgba(159, 159, 159, 1);
+                    }
+                }
+            }
+
+            input {
+                width: 100%;
+                margin-top: 9px;
+                padding: 15px;
+                font-size: 14px;
+                border-radius: 8px;
+                outline: none;
+                border: 1px solid rgba(224, 228, 236, 1);
+                background-color: rgba(237, 242, 246, 1);
+
+                &::placeholder {
+                    color: rgba(141, 152, 170, 1);
+                }
+            }
+
+            textarea {
+                width: 100%;
+                min-height: 200px;
+                resize: vertical;
+                margin-top: 7px;
+                padding: 15px;
+                font-size: 14px;
+                border-radius: 8px;
+                outline: none;
+                border: 1px solid rgba(224, 228, 236, 1);
+                background-color: rgba(237, 242, 246, 1);
+
+                &::placeholder {
+                    color: rgba(141, 152, 170, 1);
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+
+            button {
+                display: block;
+                width: 120px;
+                padding: 10px 5px;
+                background-color: transparent;
+                border-radius: 8px;
+                transition: 0.5s;
+                cursor: pointer;
+                font-size: 14px;
+                margin-top: 10px;
+                background-color: var(--primary);
+                color: rgba(255, 255, 255, 1);
+                border: 1px solid var(--primary);
+                &:hover {
+                    background-color: rgba(255, 255, 255, 1);
+                    color: var(--primary);
+                }
+                @include sm {
+                    width: 200px;
+                    font-size: 16px;
+                    padding: 12px;
+                }
+            }
+        }
+    }
+}

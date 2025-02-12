@@ -1,0 +1,12 @@
+@import '../../../../mixins.scss';
+
+.dataProject {
+    animation: content-animation 1s ease forwards;
+    .grid {
+        display: grid;
+        gap: 20px;
+        @include lg {
+            grid-template-columns: 3fr 1fr;
+        }
+    }
+}

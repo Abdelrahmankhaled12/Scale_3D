@@ -1,0 +1,54 @@
+@import '../../mixins.scss';
+
+.users {
+    padding: 20px;
+
+    .container {
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 20px 0px rgba(171, 171, 171, 0.155);
+
+        @include sm {
+            padding: 15px 25px 20px;
+        }
+
+        .div {
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                height: 5px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: #f9f9f9;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--primary);
+                border-radius: 30px;
+            }
+        }
+
+        .titlePage {
+            background-color: rgba(238, 238, 238, 1);
+            padding: 20px;
+            border-radius: 8px;
+
+            @include md {
+                width: 50%;
+            }
+
+            .title {
+                h2 {
+                    color: var(--primary);
+                    margin-bottom: 10px;
+                }
+
+                P {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+}

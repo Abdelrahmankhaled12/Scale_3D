@@ -1,0 +1,19 @@
+@import '../../mixins.scss';
+
+.structurePage {
+    background-color: rgba(243, 245, 249, 1);
+    min-height: 100vh;
+    .grid {
+        display: grid;
+        transition: 0.5s;
+        &.sidebar_active {
+            @include lg {
+                grid-template-columns: 1fr 5fr;
+            }
+        }
+        .contentPage {
+            transition: 0.5s;
+            overflow: hidden;
+        }
+    }
+}

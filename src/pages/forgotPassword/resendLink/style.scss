@@ -1,0 +1,53 @@
+@import '../../../mixins.scss';
+
+.resendLink {
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include sm {
+        background-color: #7777771c;
+    }
+    .container_ {
+        width: 100%;
+        background-color: white;
+        border-radius: 20px;
+        @include sm {
+            width: 450px;
+        }
+        .content {
+            padding: 30px 40px;
+            @include sm {
+                box-shadow: 0px 4px 20px 0px rgba(171, 171, 171, 0.155);
+            }
+            h1 {
+                font-size: 32px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 1);
+                color: var(--primary);
+                border-radius: 8px;
+                border: 1px solid var(--primary);
+                transition: 0.5s;
+                cursor: pointer;
+                font-size: 17px;
+                margin-top: 20px;
+                font-weight: 500;
+
+                &:hover {
+                    background-color: var(--primary);
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+    }
+}

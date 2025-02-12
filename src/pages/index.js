@@ -1,0 +1,13 @@
+export { default as NotFoundPage } from './404/NotFoundPage';
+export { default as Dashboard } from './dashboard/Dashboard';
+export { default as ForgotPassword } from './forgotPassword/ForgotPassword';
+export { default as ResendLink } from './forgotPassword/resendLink/ResendLink';
+export { default as Home } from './home/Home';
+export { default as Login } from './login/Login';
+export { default as NewPassword } from './newPassword/NewPassword';
+export { default as Success } from './newPassword/success/Success';
+export { default as Projects } from './projects/Projects';
+export { default as ProjectDetails } from './projects/projectDetails/ProjectDetails';
+export { default as Register } from './register/Register';
+export { default as Settings } from './settings/Settings';
+export { default as Users } from './users/Users';

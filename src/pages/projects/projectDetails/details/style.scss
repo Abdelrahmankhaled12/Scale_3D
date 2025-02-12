@@ -1,0 +1,48 @@
+@import '../../../../mixins.scss';
+
+.detailsPR {
+    animation: content-animation 1s ease forwards;
+    .grid {
+        display: grid;
+        gap: 20px;
+        @include sm {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include md {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .box {
+            background-color: #ffffff;
+            padding: 20px 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 20px 0px rgba(171, 171, 171, 0.155);
+            .grid_item {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 10px;
+            }
+            
+            h2 {
+                font-size: 16px;
+            }
+            .item {
+                margin-top: 12px;
+                h3 {
+                    font-size: 14px;
+                    color: rgba(0, 0, 0, 0.5);
+                    font-weight: 400;
+                    margin-bottom: 3px;
+                }
+                p {
+                    font-size: 14px;
+                    color: var(--primary);
+                    font-weight: 500;
+                    line-height: 1.5;
+                }
+                &:first-of-type {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}

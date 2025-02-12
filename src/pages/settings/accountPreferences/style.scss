@@ -1,0 +1,99 @@
+@import '../../../mixins.scss';
+
+.accountPreferences {
+    animation: content-animation 1s ease forwards;
+
+    form {
+        .grid_form {
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 50px;
+            row-gap: 15px;
+            margin-top: 20px;
+            padding-top: 30px;
+
+            @include md {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .div {
+            margin-bottom: 10px;
+
+            label {
+                display: block;
+                font-weight: 500;
+                color: rgba(76, 83, 95, 1);
+                font-size: 14px;
+            }
+
+            input,
+            select {
+                width: 100%;
+                margin-top: 9px;
+                padding: 15px;
+                font-size: 14px;
+                border-radius: 8px;
+                outline: none;
+                border: 1px solid rgba(224, 228, 236, 1);
+                background-color: rgba(237, 242, 246, 1);
+
+                &::placeholder {
+                    color: rgba(141, 152, 170, 1);
+                }
+
+                option {
+                    display: block;
+                    font-size: 14px;
+                    margin: 20px 0px;
+                    padding: 20px 0px;
+                }
+            }
+
+            p {
+                width: 100%;
+                margin-top: 9px;
+                padding: 15px;
+                font-size: 14px;
+                border-radius: 8px;
+                outline: none;
+                border: 1px solid rgba(224, 228, 236, 1);
+                background-color: rgba(237, 242, 246, 1);
+                color: rgba(141, 152, 170, 1);
+                cursor: pointer;
+            }
+
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+
+            button {
+                display: block;
+                width: 120px;
+                padding: 10px 5px;
+                background-color: transparent;
+                border-radius: 8px;
+                transition: 0.5s;
+                cursor: pointer;
+                font-size: 14px;
+                margin-top: 10px;
+                background-color: var(--primary);
+                color: rgba(255, 255, 255, 1);
+                border: 1px solid var(--primary);
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 1);
+                    color: var(--primary);
+                }
+
+                @include sm {
+                    width: 200px;
+                    font-size: 16px;
+                    padding: 12px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+@import '../../mixins.scss';
+
+.forgotPassword {
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include sm {
+        background-color: #7777771c;
+    }
+    .container_ {
+        width: 100%;
+        background-color: white;
+        border-radius: 20px;
+        @include sm {
+            width: 450px;
+        }
+        .content {
+            padding: 30px 40px;
+            @include sm {
+                box-shadow: 0px 4px 20px 0px rgba(171, 171, 171, 0.155);
+            }
+            h1 {
+                font-family: Inter;
+                font-size: 32px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            p {
+                margin-bottom: 20px;
+                line-height: 1.5;
+                font-size: 15px;
+                @include sm {
+                    font-size: 17px;
+                }
+                br {
+                    display: none;
+                    @include sm {
+                        display: block;
+                    }
+                }
+            }
+            form {
+                .div {
+                    margin-bottom: 20px;
+
+                    label {
+                        display: block;
+                        font-weight: 500;
+                    }
+
+                    .input_div {
+                        position: relative;
+
+                        svg {
+                            position: absolute;
+                            top: 56%;
+                            transform: translateY(-50%);
+                            left: 10px;
+                            font-size: 15px;
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        margin-top: 7px;
+                        padding: 10px 30px;
+                        font-size: 16px;
+                        border-radius: 8px;
+                        outline: none;
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                    }
+                }
+            }
+            button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                background-color: var(--primary);
+                color: rgba(255, 255, 255, 1);
+                border-radius: 8px;
+                border: 1px solid var(--primary);
+                transition: 0.5s;
+                cursor: pointer;
+                font-size: 17px;
+                margin-top: 20px;
+                font-weight: 500;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 1);
+                    color: var(--primary);
+                }
+            }
+            .orDiv {
+                text-align: center;
+                margin-top: 15px;
+                font-weight: 400;
+                border-top: 1px solid #77777739;
+                padding-top: 15px;
+                span {
+                    font-weight: 500;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

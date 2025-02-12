@@ -1,0 +1,135 @@
+@import '../../mixins.scss';
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .container_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 50px;
+
+        // flex-direction: column;
+        @include md {
+            flex-direction: row;
+        }
+
+        .partOne {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            .button_navBar {
+                color: #ffffff;
+                font-size: 30px;
+                cursor: pointer;
+                display: none;
+                @include lg {
+                    display: block;
+                }
+            }
+
+            .logo {
+                h1 {
+                    color: #ffffff;
+                    font-style: italic;
+                }
+            }
+
+            .button_navBarTablet {
+                display: none;
+                color: #ffffff;
+                font-size: 30px;
+                cursor: pointer;
+                @media screen and (min-width: 730px) {
+                    display: block;
+                }
+                @include lg {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width: 730px) {
+                display: none;
+            }
+        }
+
+        .partTwo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .userIcon {
+                display: flex;
+                align-items: center;
+                border-right: 2px solid #ffffff;
+                padding-right: 20px;
+                gap: 10px;
+
+                p {
+                    font-size: 22px;
+                    color: #ffffff;
+                    flex: 1;
+                    font-weight: 500;
+                    position: relative;
+                    top: -3px;
+                }
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                width: 140px;
+                padding: 10px;
+                background-color: var(--primary);
+                color: rgba(255, 255, 255, 1);
+                border-radius: 8px;
+                border: 1px solid var(--primary);
+                transition: 0.5s;
+                cursor: pointer;
+                font-size: 17px;
+                font-weight: 500;
+
+                svg {
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 1);
+                    color: var(--primary);
+                }
+            }
+
+            @media screen and (max-width: 730px) {
+                display: none;
+            }
+        }
+
+        .mobileResponsive {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            flex: 1;
+
+            .button_navBar {
+                color: #ffffff;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            .logo {
+                h1 {
+                    color: #ffffff;
+                    font-style: italic;
+                }
+            }
+
+            @media screen and (min-width: 730px) {
+                display: none;
+            }
+        }
+    }
+}

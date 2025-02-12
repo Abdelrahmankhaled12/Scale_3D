@@ -1,0 +1,11 @@
+@import '../../../mixins.scss';
+
+.projectDetails {
+    padding: 20px 20px 50px;
+    .loading {
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
